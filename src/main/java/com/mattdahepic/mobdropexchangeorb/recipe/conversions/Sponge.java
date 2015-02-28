@@ -27,7 +27,7 @@ public class Sponge {
         ItemStack essence = new ItemStack(MobDropExchangeOrb.itemMobEssence);
         Object[] recipe = new Object[Config.spongeEssence+1];
         recipe[0] = sponge;
-        for (int i = 0; i <= Config.spongeEssence ; i++) {
+        for (int i = 1; i <= Config.spongeEssence ; i++) {
             recipe[i] = essence;
         }
         return recipe;

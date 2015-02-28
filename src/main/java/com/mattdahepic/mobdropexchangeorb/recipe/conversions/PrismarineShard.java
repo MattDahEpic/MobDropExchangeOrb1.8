@@ -25,7 +25,7 @@ public class PrismarineShard {
         ItemStack essence = new ItemStack(MobDropExchangeOrb.itemMobEssence);
         Object[] recipe = new Object[Config.prismarineShardEssence+1];
         recipe[0] = shard;
-        for (int i = 0; i <= Config.prismarineShardEssence ; i++) {
+        for (int i = 1; i <= Config.prismarineShardEssence ; i++) {
             recipe[i] = essence;
         }
         return recipe;

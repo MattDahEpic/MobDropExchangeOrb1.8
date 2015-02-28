@@ -25,7 +25,7 @@ public class PrismarineCrystal {
         ItemStack essence = new ItemStack(MobDropExchangeOrb.itemMobEssence);
         Object[] recipe = new Object[Config.prismarineCrystalEssence+1];
         recipe[0] = crystal;
-        for (int i = 0; i <= Config.prismarineCrystalEssence ; i++) {
+        for (int i = 1; i <= Config.prismarineCrystalEssence ; i++) {
             recipe[i] = essence;
         }
         return recipe;
