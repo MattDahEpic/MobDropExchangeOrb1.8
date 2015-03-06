@@ -3,6 +3,8 @@ package com.mattdahepic.mobdropexchangeorb;
 import com.mattdahepic.mobdropexchangeorb.config.Config;
 import com.mattdahepic.mobdropexchangeorb.item.ItemMobDropExchangeOrb;
 import com.mattdahepic.mobdropexchangeorb.item.ItemMobEssence;
+import net.minecraft.item.Item;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
@@ -10,8 +12,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.item.Item;
-import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.Level;
 
 @Mod(modid = MobDropExchangeOrb.MODID,name = MobDropExchangeOrb.NAME,version = MobDropExchangeOrb.VERSION,guiFactory = "com.mattdahepic.mobdropexchangeorb.config.MobDropExchangeOrbConfigFactory")
@@ -21,7 +21,7 @@ public class MobDropExchangeOrb {
 
     public static final String MODID = "mobdropexchangeorb";
     public static final String NAME = "Mob Drop Exchange Orb";
-    public static final String VERSION = "mc1.7.10-v1.4";
+    public static final String VERSION = "mc1.7.10-v1.4.1";
 
     @SidedProxy(clientSide = "com.mattdahepic.mobdropexchangeorb.client.ClientProxy",serverSide = "com.mattdahepic.mobdropexchangeorb.CommonProxy")
     public static CommonProxy proxy;

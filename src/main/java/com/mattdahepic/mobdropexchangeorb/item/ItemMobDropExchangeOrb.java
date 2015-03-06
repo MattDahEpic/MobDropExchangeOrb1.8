@@ -1,8 +1,6 @@
 package com.mattdahepic.mobdropexchangeorb.item;
 
 import com.mattdahepic.mobdropexchangeorb.config.Config;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,7 +22,7 @@ public class ItemMobDropExchangeOrb extends Item {
         } else if (Config.orbDurability == 1) {
             return null;
         } else { //infinite, return input
-            return stack;
+            return new ItemStack(this);
         }
     }
 }
