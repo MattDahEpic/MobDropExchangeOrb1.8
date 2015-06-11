@@ -28,7 +28,7 @@ public class MobDropExchangeOrb {
     public static final String MODID = "mobdropexchangeorb";
     public static final String NAME = "Mob Drop Exchange Orb";
     public static final String VERSION = "1.8-1.5";
-    public static final String UPDATE_URL = "";
+    public static final String UPDATE_URL = "https://raw.githubusercontent.com/MattDahEpic/MobDropExchangeOrb1.8/master/version.txt";
 
     @SidedProxy(clientSide = "com.mattdahepic.mobdropexchangeorb.client.ClientProxy",serverSide = "com.mattdahepic.mobdropexchangeorb.CommonProxy")
     public static CommonProxy proxy;
