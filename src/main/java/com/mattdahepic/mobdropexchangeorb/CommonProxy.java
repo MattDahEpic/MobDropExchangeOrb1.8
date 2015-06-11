@@ -1,7 +1,5 @@
 package com.mattdahepic.mobdropexchangeorb;
 
-import com.mattdahepic.mobdropexchangeorb.recipe.RecipeMobDropExchangeOrb;
-import com.mattdahepic.mobdropexchangeorb.recipe.conversions.*;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
@@ -11,23 +9,6 @@ public class CommonProxy {
         GameRegistry.registerItem(MobDropExchangeOrb.itemMobEssence,"mobEssence");
     }
     public void registerRecipes() {
-        RecipeMobDropExchangeOrb.registerRecipes();
-        //conversions
-        BlazeRod.registerRecipes();
-        com.mattdahepic.mobdropexchangeorb.recipe.conversions.String.registerRecipes();
-        SpiderEye.registerRecipes();
-        Gunpowder.registerRecipes();
-        MusicDisk.registerRecipes();
-        EnderPearl.registerRecipes();
-        GhastTear.registerRecipes();
-        MagmaCream.registerRecipes();
-        Arrow.registerRecipes();
-        RottenFlesh.registerRecipes();
-        Bone.registerRecipes();
-        SlimeBall.registerRecipes();
-        Witch.registerRecipes();
-        PrismarineCrystal.registerRecipes();
-        PrismarineShard.registerRecipes();
-        Sponge.registerRecipes();
+        //TODO: maybe add back in the recipes here?
     }
 }
