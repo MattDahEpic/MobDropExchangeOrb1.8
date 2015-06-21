@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
-@Mod(modid = MobDropExchangeOrb.MODID,name = MobDropExchangeOrb.NAME,version = MobDropExchangeOrb.VERSION,dependencies = "required-after:mdecore@[1.8-1.1.2);")
+@Mod(modid = MobDropExchangeOrb.MODID,name = MobDropExchangeOrb.NAME,version = MobDropExchangeOrb.VERSION,dependencies = "required-after:mdecore@[1.8-1.1.2,);")
 public class MobDropExchangeOrb {
     @Mod.Instance("mobdropexchangeorb")
     public static MobDropExchangeOrb instance;
