@@ -64,7 +64,7 @@ public class MobDropExchangeOrb {
         if (!event.player.worldObj.isRemote) {
             if (event.player instanceof EntityPlayerMP) {
                 LogHelper.info(MODID,"Sending configuration settings packet from the server to the connecting client "+event.player.getDisplayName()+".");
-                IMessage sync = new SyncPacket.SyncMessage(Config.blazeEssence,Config.stringEssence,Config.spiderEyeEssence,Config.gunpowderEssence,Config.enderPealEssence,Config.ghastTearEssence,Config.magmaCreamEssence,Config.arrowEssence,Config.boneEssence,Config.slimeBallEssence,Config.rottenFleshEssence,Config.convertMusicDisks,Config.convertWitchDrops,Config.glassBottleEssence,Config.glowstoneEssence,Config.redstoneEssence,Config.stickEssence,Config.sugarEssence,Config.orbHasDurability,Config.orbDurability,Config.orbHardMode);
+                IMessage sync = new SyncPacket.SyncMessage(Config.blazeEssence,Config.stringEssence,Config.spiderEyeEssence,Config.gunpowderEssence,Config.enderPealEssence,Config.ghastTearEssence,Config.magmaCreamEssence,Config.arrowEssence,Config.boneEssence,Config.slimeBallEssence,Config.rottenFleshEssence,Config.prismarieCrystalEssence,Config.prismarineShardEssence,Config.convertSponges,Config.spongeEssence,Config.convertWitherSkulls,Config.witherSkullEssence,Config.convertMusicDisks,Config.convertWitchDrops,Config.glassBottleEssence,Config.glowstoneEssence,Config.redstoneEssence,Config.stickEssence,Config.sugarEssence,Config.orbHasDurability,Config.orbDurability,Config.orbHardMode);
                 PacketHandler.net.sendTo(sync,(EntityPlayerMP) event.player);
             }
         }

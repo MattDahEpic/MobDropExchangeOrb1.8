@@ -24,6 +24,14 @@ public class Config {
     public static int boneEssence = 1;
     public static int slimeBallEssence = 1;
     public static int rottenFleshEssence = 1;
+    public static int prismarieCrystalEssence = 2;
+    public static int prismarineShardEssence = 2;
+
+    public static boolean convertSponges = true;
+    public static int spongeEssence = 3;
+
+    public static boolean convertWitherSkulls = true;
+    public static int witherSkullEssence = 8;
 
     public static boolean convertMusicDisks = true;
 
@@ -77,6 +85,14 @@ public class Config {
         boneEssence = c.getInt("boneEssence",CATEGORY_ESSENCE,boneEssence,MIN,MAX,"Worth of a bone in essence.");
         slimeBallEssence = c.getInt("slimeBallEssence",CATEGORY_ESSENCE,slimeBallEssence,MIN,MAX,"Worth of a slime ball in essence.");
         rottenFleshEssence = c.getInt("rottenFleshEssence",CATEGORY_ESSENCE,rottenFleshEssence,MIN,MAX,"Worth of a rotten flesh in essence.");
+        prismarieCrystalEssence = c.getInt("prismarineCrystalEssence",CATEGORY_ESSENCE,prismarieCrystalEssence,MIN,MAX,"Worth of a prismarine crystal in essence");
+        prismarineShardEssence = c.getInt("prismarineShardEssence",CATEGORY_ESSENCE,prismarineShardEssence,MIN,MAX,"Worth of a prismarine shard in essence");
+
+        convertSponges = c.getBoolean("convertSponges",CATEGORY_ESSENCE,convertSponges,"Should players be allowed to convert essence to sponges?");
+        spongeEssence = c.getInt("spongeEssence",CATEGORY_ESSENCE,spongeEssence,MIN,MAX,"Worth of a sponge in essence.");
+
+        convertWitherSkulls = c.getBoolean("convertWitherSkulls",CATEGORY_ESSENCE,convertWitherSkulls,"Should wither skulls be convertable?");
+        witherSkullEssence = c.getInt("witherSkullEssence",CATEGORY_ESSENCE,witherSkullEssence,MIN,MAX,"Worth of a wither skull in essence.");
 
         convertMusicDisks = c.getBoolean("convertMusicDisks", CATEGORY_ESSENCE, convertMusicDisks, "Should music disks be converted between the types?");
 

@@ -1,2 +1,1 @@
-1.8-1.5
-Feature parity to 1.7.10 version
+1.8-1.5.1

@@ -25,6 +25,14 @@ public class SyncPacket implements IMessageHandler<SyncPacket.SyncMessage,IMessa
             Config.boneEssence = message.boneEssence;
             Config.slimeBallEssence = message.slimeBallEssence;
             Config.rottenFleshEssence = message.rottenFleshEssence;
+            Config.prismarieCrystalEssence = message.prismarineCrystalEssence;
+            Config.prismarineShardEssence = message.prismarineShardEssence;
+
+            Config.convertSponges = message.convertSponges;
+            Config.spongeEssence = message.spongeEssence;
+
+            Config.convertWitherSkulls = message.convertWitherSkulls;
+            Config.witherSkullEssence = message.witherSkullEssence;
 
             Config.convertMusicDisks = message.convertMusicDisks;
 
@@ -40,7 +48,7 @@ public class SyncPacket implements IMessageHandler<SyncPacket.SyncMessage,IMessa
             Config.orbHardMode = message.orbHardMode;
 
             LogHelper.info(MobDropExchangeOrb.MODID,"Changing recipes according to server settings.");
-            RecipeRegisterer.registerRecipes(Config.convertMusicDisks,Config.convertWitchDrops,Config.orbHardMode);
+            RecipeRegisterer.registerRecipes(Config.convertMusicDisks,Config.convertWitchDrops,Config.convertSponges,Config.convertWitherSkulls,Config.orbHardMode);
         }
         return null;
     }
@@ -56,6 +64,12 @@ public class SyncPacket implements IMessageHandler<SyncPacket.SyncMessage,IMessa
         private int boneEssence;
         private int slimeBallEssence;
         private int rottenFleshEssence;
+        private int prismarineCrystalEssence;
+        private int prismarineShardEssence;
+        private boolean convertSponges;
+        private int spongeEssence;
+        private boolean convertWitherSkulls;
+        private int witherSkullEssence;
         private boolean convertMusicDisks;
         private boolean convertWitchDrops;
         private int glassBottleEssence;
@@ -67,7 +81,7 @@ public class SyncPacket implements IMessageHandler<SyncPacket.SyncMessage,IMessa
         private int orbDurability;
         private boolean orbHardMode;
         public SyncMessage () {}
-        public SyncMessage (int blazeEssence,int stringEssence,int spiderEyeEssence,int gunpowderEssence,int enderPearlEssence,int ghastTearEssence,int magmaCreamEssence, int arrowEssence,int boneEssence,int slimeBallEssence,int rottenFleshEssence,boolean convertMusicDisks,boolean convertWitchDrops, int glassBottleEssence,int glowstoneEssence,int redstoneEssence,int stickEssence,int sugarEssence,boolean orbHasDurability,int orbDurability,boolean orbHardMode) {
+        public SyncMessage (int blazeEssence,int stringEssence,int spiderEyeEssence,int gunpowderEssence,int enderPearlEssence,int ghastTearEssence,int magmaCreamEssence, int arrowEssence,int boneEssence,int slimeBallEssence,int rottenFleshEssence,int prismarineCrystalEssence,int prismarineShardEssence,boolean convertSponges,int spongeEssence,boolean convertWitherSkulls,int witherSkullEssence,boolean convertMusicDisks,boolean convertWitchDrops, int glassBottleEssence,int glowstoneEssence,int redstoneEssence,int stickEssence,int sugarEssence,boolean orbHasDurability,int orbDurability,boolean orbHardMode) {
             this.blazeEssence = blazeEssence;
             this.stringEssence = stringEssence;
             this.spiderEyeEssence = spiderEyeEssence;
@@ -79,6 +93,12 @@ public class SyncPacket implements IMessageHandler<SyncPacket.SyncMessage,IMessa
             this.boneEssence = boneEssence;
             this.slimeBallEssence = slimeBallEssence;
             this.rottenFleshEssence = rottenFleshEssence;
+            this.prismarineCrystalEssence = prismarineCrystalEssence;
+            this.prismarineShardEssence = prismarineShardEssence;
+            this.convertSponges = convertSponges;
+            this.spongeEssence = spongeEssence;
+            this.convertWitherSkulls = convertWitherSkulls;
+            this.witherSkullEssence = witherSkullEssence;
             this.convertMusicDisks = convertMusicDisks;
             this.convertWitchDrops = convertWitchDrops;
             this.glassBottleEssence = glassBottleEssence;
@@ -103,6 +123,12 @@ public class SyncPacket implements IMessageHandler<SyncPacket.SyncMessage,IMessa
             this.boneEssence = buf.readInt();
             this.slimeBallEssence = buf.readInt();
             this.rottenFleshEssence = buf.readInt();
+            this.prismarineCrystalEssence = buf.readInt();
+            this.prismarineShardEssence = buf.readInt();
+            this.convertSponges = buf.readBoolean();
+            this.spongeEssence = buf.readInt();
+            this.convertWitherSkulls = buf.readBoolean();
+            this.witherSkullEssence = buf.readInt();
             this.convertMusicDisks = buf.readBoolean();
             this.convertWitchDrops = buf.readBoolean();
             this.glassBottleEssence = buf.readInt();
@@ -127,6 +153,12 @@ public class SyncPacket implements IMessageHandler<SyncPacket.SyncMessage,IMessa
             buf.writeInt(boneEssence);
             buf.writeInt(slimeBallEssence);
             buf.writeInt(rottenFleshEssence);
+            buf.writeInt(prismarineCrystalEssence);
+            buf.writeInt(prismarineShardEssence);
+            buf.writeBoolean(convertSponges);
+            buf.writeInt(spongeEssence);
+            buf.writeBoolean(convertWitherSkulls);
+            buf.writeInt(witherSkullEssence);
             buf.writeBoolean(convertMusicDisks);
             buf.writeBoolean(convertWitchDrops);
             buf.writeInt(glassBottleEssence);
